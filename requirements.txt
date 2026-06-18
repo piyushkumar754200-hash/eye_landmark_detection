@@ -1,0 +1,11 @@
+# Eye Landmark Detection — dependencies
+# mediapipe pulls in opencv-contrib-python (cv2) and numpy automatically.
+#
+# Apple Silicon Macs (M1/M2/M3/M4): latest mediapipe; works on Python 3.9–3.14.
+mediapipe>=0.10.35; platform_machine == "arm64"
+#
+# Intel Macs (x86_64): mediapipe's last Intel wheel is 0.10.21, which only
+# supports Python 3.9–3.12. On an Intel Mac, build the venv with Python 3.12.
+mediapipe==0.10.21; platform_machine == "x86_64"
+#
+numpy
